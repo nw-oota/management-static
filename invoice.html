@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>請求書</title>
+	<meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="./css/destyle.css" media="all">
+	<link rel="stylesheet" href="./css/invoice.css" media="all">
+	<!-- wkhtmltopdf --disable-smart-shrinking -T 0 -B 0 -L 0 -R 0 http://localhost:3016/invoice.html invoice.pdf -->
+</head>
+
+<body>
+	<article class="page">
+		<!-- <div class="page_border -border01"></div>
+		<div class="page_border -border02"></div>
+		<div class="page_window"></div> -->
+		<div class="info">
+			<div class="info_col -left">
+				<div class="info_comp">
+					<div class="info_comp_cnt">
+						<p class="info_comp_addr">
+							〒930-8501<br>
+							富山県富山市新総曲輪1-7<br>
+							住所その他住所その他住所その他
+						</p>
+						<p class="info_comp_name"><span>株式会社ネットワールド</span><small>御中</small></p>
+						<p class="info_comp_dep">情報戰略本部 システム推進部</p>
+						<p class="info_comp_manage">ネット 太郎 様</p>
+					</div>
+				</div>
+				<p class="info_text">以下の通りご請求申し上げます。</p>
+				<dl class="info_total">
+					<dt>今回ご請求額：</dt>
+					<dd><strong>¥226,512</strong><small>（税込）</small></dd>
+				</dl>
+				<div class="info_detail">
+					<dl>
+						<dt>支払期日：</dt>
+						<dd>2023/08/31</dd>
+					</dl>
+					<dl>
+						<dt>お振込先：</dt>
+						<dd>
+							北陸銀行　清水町支店<br>
+							（普）2600130
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="info_col -right">
+				<h1 class="info_ttl">請求明細書</h1>
+				<div class="info_data">
+					<dl>
+						<dt>発行日：</dt>
+						<dd>2023/07/19</dd>
+						<dt>請求番号：</dt>
+						<dd>99999</dd>
+					</dl>
+				</div>
+				<div class="info_nw">
+					<div class="info_nw_cnt">
+						<div class="info_nw_name">
+							<div>
+								<img src="./img/docs/logo.png" width="40" alt="">
+							</div>
+							<span>株式会社ネットワールド</span>
+						</div>
+						<p class="info_nw_info">
+							〒939-8096 富山県富山市西大泉5-15<br>
+							TEL：076-494-1460<br>
+							FAX：076-494-1582<br>
+							担当者：新田
+						</p>
+					</div>
+					<div class="info_nw_sign"><img src="./img/docs/sign.png" width="90" alt=""></div>
+				</div>
+				<table class="info_price">
+					<tbody>
+						<tr>
+							<th>前月残高</th>
+							<th>入金額</th>
+						</tr>
+						<tr>
+							<td>¥1,594,780</td>
+							<td>¥1,594,780</td>
+						</tr>
+						<tr>
+							<th>当月売上額</th>
+							<th>売掛残高</th>
+						</tr>
+						<tr>
+							<td>¥226,512</td>
+							<td>¥226,512</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<table class="tbl">
+			<thead>
+				<tr>
+					<th class="-col1">伝票番号</th>
+					<th class="-col2">日付</th>
+					<th class="-col3">品名</th>
+					<th class="-col4">数量</th>
+					<th class="-col5">単価</th>
+					<th class="-col6">金額</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>87625</td>
+					<td>7/10</td>
+					<td>
+						とやまUターンガイドWEBサイト管理費<br>
+						システム保守管理費<br>
+						外部バックアップ<br>
+						コンテンツ運用サポート<br>
+						マルチドメイン費
+					</td>
+					<td>
+						<br>
+						3ヶ月<br>
+						3ヶ月<br>
+						3ヶ月<br>
+						3ヶ月
+					</td>
+					<td>
+						<br>
+						¥20,000<br>
+						¥10,000<br>
+						¥2,500<br>
+						¥1,500
+					</td>
+					<td>
+						<br>
+						¥60,000<br>
+						¥30,000<br>
+						¥7,500<br>
+						¥4,500
+					</td>
+				</tr>
+				<tr>
+					<td>87729</td>
+					<td>6/20</td>
+					<td>
+						人材活躍推進センター リーフレット修正<br>
+						デザイン修正(レイアウト変更、組織図作成等)<br>
+						校正<br>
+						印刷(マットコート110kg、A4三つ折り、4C/4C)<br>
+						写真素材購入
+					</td>
+					<td>
+						<br>
+						1式<br>
+						1式<br>
+						2000部<br>
+						1枚
+					</td>
+					<td>
+						<br>
+						-<br>
+						-<br>
+						-<br>
+						-
+					</td>
+					<td>
+						<br>
+						¥25,000<br>
+						¥3,000<br>
+						¥17,800<br>
+						¥3,300
+					</td>
+				</tr>
+				<tr>
+					<td>87779</td>
+					<td>6/20</td>
+					<td>
+						ライチョウサポート隊 ワッペン制作2023<br>
+						デザインデータ調整<br>
+						転写ワッペン代(8×4cm楕円形)<br>
+						データ版代<br>
+						安全ピン(縫い付け)
+					</td>
+					<td>
+						<br>
+						1式<br>
+						50枚<br>
+						1式<br>
+						50枚
+					</td>
+					<td>
+						<br>
+						-<br>
+						¥800<br>
+						-<br>
+						¥170
+					</td>
+					<td>
+						<br>
+						¥2,000<br>
+						¥40,000<br>
+						¥4,320<br>
+						¥8,500
+					</td>
+				</tr>
+				<tr>
+					<td>87779</td>
+					<td>6/20</td>
+					<td>
+						ライチョウサポート隊 ワッペン制作2023<br>
+						デザインデータ調整<br>
+						転写ワッペン代(8×4cm楕円形)<br>
+						データ版代<br>
+						安全ピン(縫い付け)
+					</td>
+					<td>
+						<br>
+						1式<br>
+						50枚<br>
+						1式<br>
+						50枚
+					</td>
+					<td>
+						<br>
+						-<br>
+						¥800<br>
+						-<br>
+						¥170
+					</td>
+					<td>
+						<br>
+						¥2,000<br>
+						¥40,000<br>
+						¥4,320<br>
+						¥8,500
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="foot">
+			<ul class="caution">
+				<li>※翌月末までに弊社口座にお振込いただけるようにお願い申し上げます。</li>
+				<li>※恐れ入りますが、請求額が1万円未満の方は振込手数料は御社でご負担くださいますようお願い申し上げます。</li>
+				<li>※売掛残高について、行き違いでお振り込みの際は、ご容赦ください。</li>
+				<li>※お支払い日によって、負数で計上される場合がございますので、ご了承ください。</li>
+			</ul>
+			<div class="sum">
+				<dl>
+					<dt>小計</dt>
+					<dd>¥205,920</dd>
+				</dl>
+				<dl>
+					<dt>消費税額（10%）</dt>
+					<dd>¥20,592</dd>
+				</dl>
+				<dl class="-total">
+					<dt>合計金額</dt>
+					<dd>¥226,512</dd>
+				</dl>
+			</div>
+		</div>
+		<p class="end">以上</p>
+	</article>
+</body>
+
+</html>

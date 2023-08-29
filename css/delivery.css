@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap");
+@page {
+  margin: 0mm;
+  size: A4 portrait;
+}
+html {
+  font-size: 8pt;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0mm;
+  background: #eeeeee;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  margin: auto;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.border {
+  position: absolute;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dotted #cccccc;
+}
+.border.-border01 {
+  top: 33.333%;
+}
+.border.-border02 {
+  top: 66.666%;
+}
+
+.page {
+  position: relative;
+  height: 99mm;
+  padding: 4.1mm;
+  box-sizing: border-box;
+  background: #fefefe;
+}
+
+.info {
+  position: relative;
+  overflow: hidden;
+}
+.info_col.-left {
+  float: left;
+}
+.info_col.-right {
+  float: right;
+}
+.info_comp_name {
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid;
+  border-color: #ffffff;
+  border-bottom-color: #000000;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.info_comp_name small {
+  margin-left: 1em;
+}
+.info_comp_dep {
+  margin-top: 0.5rem;
+}
+.info_ttl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.75rem;
+  text-align: center;
+}
+.info_data dl {
+  overflow: hidden;
+  text-align: right;
+}
+.info_data dl dt {
+  float: left;
+}
+.info_data dl dd {
+  margin-left: 6em;
+}
+
+.tbl {
+  width: 100%;
+  margin-top: 0.5rem;
+  border: 1px solid #000000;
+}
+.tbl tr:nth-child(2n) {
+  background: #efefef;
+}
+.tbl th,
+.tbl td {
+  padding: 0.2rem 0.9rem;
+  border-left: 1px solid;
+  border-color: #ffffff;
+  border-left-color: #000000;
+}
+.tbl thead th {
+  padding: 0.25rem 0.9rem;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-color: #ffffff;
+  border-bottom-color: #000000;
+  border-left-color: #000000;
+  background: #eeeeee;
+  text-align: center;
+}
+.tbl td:nth-child(2), .tbl td:nth-child(4) {
+  text-align: center;
+}
+.tbl td:nth-child(2), .tbl td:nth-child(3), .tbl td:nth-child(4) {
+  width: 8em;
+  white-space: nowrap;
+}
+.tbl td:nth-child(3), .tbl td:nth-child(4) {
+  text-align: right;
+}
+
+.foot {
+  margin-top: 0.2rem;
+  overflow: hidden;
+}
+.foot .btm {
+  float: left;
+  margin-top: 0.5rem;
+}
+.foot .btm_nw {
+  position: relative;
+  z-index: 10;
+  margin-top: 0.5rem;
+}
+.foot .btm_name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  vertical-align: bottom;
+}
+.foot .sum {
+  display: table;
+  float: right;
+}
+.foot .sum dl {
+  display: table-row;
+}
+.foot .sum dl dt,
+.foot .sum dl dd {
+  display: table-cell;
+  padding: 0.4rem 0;
+  border-bottom: 1px dotted;
+  border-color: #ffffff;
+  border-bottom-color: #000000;
+}
+.foot .sum dl dt {
+  padding-right: 1rem;
+  font-weight: normal;
+}
+.foot .sum dl dd {
+  text-align: right;
+}
+.foot .sum dl.-total dt,
+.foot .sum dl.-total dd {
+  border-bottom: 1px solid;
+  font-weight: bold;
+}/*# sourceMappingURL=delivery.css.map */

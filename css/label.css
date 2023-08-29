@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap");
+@page {
+  margin: 0mm;
+  size: A4 portrait;
+}
+html {
+  font-size: 8pt;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0mm;
+  background: #eeeeee;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  margin: auto;
+  padding: 21.5mm 19.3mm;
+  box-sizing: border-box;
+  background: #fefefe;
+}
+
+.addr {
+  overflow: hidden;
+}
+.addr.-border .addr_item {
+  border-color: #dddddd;
+}
+.addr.-border .addr_item:nth-child(-n+2) {
+  border-color: #dddddd;
+}
+.addr_item {
+  display: table;
+  float: left;
+  width: 83.8mm;
+  height: 42.3mm;
+  margin-left: 3.8mm;
+  padding: 0 2rem;
+  border: 1px solid #ffffff;
+  border-top: none;
+  box-sizing: border-box;
+}
+.addr_item:nth-child(-n+2) {
+  margin-top: 0;
+  border-top: 1px solid #ffffff;
+}
+.addr_item:nth-child(2n+1) {
+  margin-left: 0;
+}
+.addr_item_cnt {
+  display: table-cell;
+  vertical-align: middle;
+}
+.addr_item_name {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid;
+  border-color: #ffffff;
+  border-bottom-color: #000000;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.addr_item_name small {
+  margin-left: 1em;
+}
+.addr_item_dep {
+  margin-top: 0.75rem;
+}/*# sourceMappingURL=label.css.map */

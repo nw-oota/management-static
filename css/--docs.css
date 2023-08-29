@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@page {
+  margin: 1.5rem 0;
+  size: A4 portrait;
+}
+html {
+  font-size: 10pt;
+  line-height: 1.5;
+  font-family: "PAexGothic", "IPAexゴシック", sans-serif;
+}
+
+body {
+  margin: 0mm;
+  background: #eeeeee;
+}
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  margin: auto;
+  padding: 1.5rem 0;
+  box-sizing: border-box;
+  background: #fefefe;
+}
+
+.tbl .row {
+  display: table;
+  margin: 1.5rem 0;
+  table-layout: fixed;
+  border-spacing: 1.5rem 0;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+}
+.tbl .row:first-child {
+  margin-top: 0;
+}
+.tbl .row:last-child {
+  margin-bottom: 0;
+}
+.tbl .row .col {
+  display: table-cell;
+  text-align: justify;
+}
+
+@media print {
+  body {
+    background: none;
+  }
+  .page {
+    padding: 0;
+  }
+}/*# sourceMappingURL=--docs.css.map */

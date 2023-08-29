@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>リストサンプル | マネジメントシステム</title>
+	<meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="icon" href="./img/cmn/logo.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="./css/reset.css" media="all">
+	<link rel="stylesheet" href="./css/form.css" media="all">
+	<link rel="stylesheet" href="./css/frame.css" media="all">
+	<link rel="stylesheet" href="./css/style.css" media="all">
+
+	<!-- font awesome -->
+	<script src="https://kit.fontawesome.com/ea21566daa.js" crossorigin="anonymous"></script>
+
+	<!-- DataTables -->
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" />
+	<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+</head>
+
+<body>
+	<header class="sphd">
+		<a class="sphd_logo" href="/" title="ネットワールド マネジメントシステム">
+			<svg class="sphd_logo_img" viewBox="0 0 55 46.5">
+				<polygon class="-path01" points="54.5,0.5 36.54,5.34 36.67,46 54.5,46 "></polygon>
+				<polygon class="-path02" points="0.5,15.04 18.5,10.2 54.3,46 36.67,46 18.46,27.79 18.46,46 0.5,46 "></polygon>
+			</svg>
+			<span class="sphd_logo_ttl">NMS</span>
+		</a>
+		<button id="sphd_menu" class="sphd_menu" type="button">
+			<span class="-top"></span>
+			<span class="-btm"></span>
+		</button>
+	</header>
+	<div class="wrapper">
+		<aside id="side" class="side">
+			<a class="side_logo" href="/" title="ネットワールド マネジメントシステム">
+				<svg class="side_logo_img" viewBox="0 0 55 46.5">
+					<polygon class="-path01" points="54.5,0.5 36.54,5.34 36.67,46 54.5,46 "></polygon>
+					<polygon class="-path02" points="0.5,15.04 18.5,10.2 54.3,46 36.67,46 18.46,27.79 18.46,46 0.5,46 "></polygon>
+				</svg>
+				<span class="side_logo_ttl">NMS</span>
+			</a>
+			<div class="side_cnt">
+				<nav class="side_nav">
+					<ul class="side_nav_list">
+						<li class="-title">サンプル</li>
+						<li><a href="./index.html"><i class="fa-solid fa-poo"></i><span>フォーム</span></a></li>
+						<li class="mb-3"><a href="./list.html"><i class="fa-solid fa-poo"></i><span>リスト</span></a></li>
+						<li><a href="aaa"><i class="fas fa-tachometer-alt"></i><span>ダッシュボード</span></a></li>
+						<li class="mt-3">
+							<a href="aaa"><i class="fa-solid fa-users"></i><span>顧客</span></a>
+							<ul class="side_nav_slist">
+								<li class="-current"><a href="aaa"><span>顧客一覧</span></a></li>
+								<li><a href="aaa"><span>新規追加</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="aaa"><i class="fa-solid fa-handshake"></i><span>サプライヤー</span></a>
+							<ul class="side_nav_slist">
+								<li class="-current"><a href="aaa"><span>サプライヤー一覧</span></a></li>
+								<li><a href="aaa"><span>新規追加</span></a></li>
+							</ul>
+						</li>
+						<li class="mt-3">
+							<a href="aaa"><i class="fa-solid fa-file-invoice-dollar"></i><span>見積もり</span></a>
+							<ul class="side_nav_slist">
+								<li class="-current"><a href="aaa"><span>見積もり一覧</span></a></li>
+								<li><a href="aaa"><span>新規追加</span></a></li>
+								<li><a href="aaa"><span>料金プラン</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="aaa"><i class="fa-solid fa-table-list"></i><span>プロジェクト</span></a>
+							<ul class="side_nav_slist">
+								<li class="-current"><a href="aaa"><span>プロジェクト一覧</span></a></li>
+								<li><a href="aaa"><span>新規追加</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="aaa"><i class="fa-solid fa-calendar-day"></i><span>契約</span></a>
+							<ul class="side_nav_slist">
+								<li class="-current"><a href="aaa"><span>契約一覧</span></a></li>
+								<li><a href="aaa"><span>新規追加</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="aaa"><i class="fa-solid fa-headset"></i><span>NDM</span></a>
+							<ul class="side_nav_slist">
+								<li class="-current"><a href="aaa"><span>NDM一覧</span></a></li>
+								<li><a href="aaa"><span>新規追加</span></a></li>
+							</ul>
+						</li>
+						<li class="-title mt-3">経理</li>
+						<li>
+							<a href="aaa"><i class="fa-solid fa-circle-down"></i><span>引き落とし</span></a>
+							<ul class="side_nav_slist">
+								<li class="-current"><a href="aaa"><span>引き落とし一覧</span></a></li>
+								<li><a href="aaa"><span>新規追加</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="aaa"><i class="fa-solid fa-file-arrow-up"></i><span>発注書</span></a>
+							<ul class="side_nav_slist">
+								<li class="-current"><a href="aaa"><span>発注書一覧</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="aaa"><i class="fa-solid fa-file-arrow-down"></i><span>請求書</span></a>
+							<ul class="side_nav_slist">
+								<li class="-current"><a href="aaa"><span>請求書一覧</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="aaa"><i class="fa-solid fa-file-invoice"></i><span>納品書</span></a>
+							<ul class="side_nav_slist">
+								<li class="-current"><a href="aaa"><span>納品書一覧</span></a></li>
+							</ul>
+						</li>
+						<li class="mt-3"><a href="aaa"><i class="fa-solid fa-square-poll-vertical"></i><span>集計</span></a></li>
+						<li><a href="aaa"><i class="fa-solid fa-envelope"></i><span>メール配信</span></a></li>
+						<li><a href="aaa"><i class="fa-solid fa-address-card"></i><span>スタッフ</span></a></li>
+						<li><a href="aaa"><i class="fa-solid fa-gear"></i><span>設定</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<main class="main">
+			<header class="main_hd">
+				<h1 class="main_hd_ttl mb-0">リストサンプル</h1>
+				<ol class="main_hd_pnkz">
+					<li><a href="/">HOME</a></li>
+					<li>リストサンプル</li>
+				</ol>
+			</header>
+			<div class="main_cnt">
+				<div class="grid">
+					<div class="col-12">
+						<div class="card">
+							<h2 class="card_ttl">XXXX一覧</h2>
+							<p class="card_text">テキストが入ります。テキストが入ります。テキストが入ります。<strong>テキストが入ります。</strong>テキストが入ります。テキストが入ります。テキストが入ります。</p>
+							<table id="table" class="-striped responsive display nowrap" style="width: 100%">
+								<thead>
+									<tr>
+										<th data-priority="2">#</th>
+										<th data-priority="1">名前</th>
+										<th data-priority="2">電話番号</th>
+										<th data-priority="3">誕生日</th>
+										<th data-priority="4">年齢</th>
+										<th data-priority="1">アクション</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>冨士原 都子</td>
+										<td>090-4585-1356</td>
+										<td>1991年10月28日</td>
+										<td>31</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(1)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>葵 絵理佳</td>
+										<td>070-2326-1730</td>
+										<td>1989年05月30日</td>
+										<td>34</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(2)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>長瀬 綾子</td>
+										<td>090-2298-2572</td>
+										<td>1968年12月13日</td>
+										<td>54</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(3)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>坂井 邦彦</td>
+										<td>050-4128-9137</td>
+										<td>1952年07月25日</td>
+										<td>70</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(4)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>水谷 郁子</td>
+										<td>050-6132-3747</td>
+										<td>1984年05月27日</td>
+										<td>39</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(5)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>冨田 唯</td>
+										<td>090-1542-4724</td>
+										<td>1989年03月15日</td>
+										<td>34</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(6)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>中村 美和子</td>
+										<td>080-7623-0697</td>
+										<td>1943年01月25日</td>
+										<td>80</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(7)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>糸数 美枝子</td>
+										<td>090-6235-1933</td>
+										<td>1959年10月22日</td>
+										<td>63</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(8)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>宮崎 雄太</td>
+										<td>080-7700-6837</td>
+										<td>1970年07月14日</td>
+										<td>53</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(9)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>寺崎 大地</td>
+										<td>090-3494-6736</td>
+										<td>1993年05月27日</td>
+										<td>30</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(10)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>三崎 佐和子</td>
+										<td>090-5386-8769</td>
+										<td>1979年08月04日</td>
+										<td>43</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(11)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>12</td>
+										<td>湊 純</td>
+										<td>050-2558-4858</td>
+										<td>1945年08月07日</td>
+										<td>77</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(12)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>13</td>
+										<td>小川 智博</td>
+										<td>090-1263-3727</td>
+										<td>1982年03月23日</td>
+										<td>41</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(13)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>14</td>
+										<td>能登 紘子</td>
+										<td>090-1776-3671</td>
+										<td>1960年09月24日</td>
+										<td>62</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(14)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>15</td>
+										<td>青木 恵美子</td>
+										<td>080-0055-9946</td>
+										<td>2001年04月24日</td>
+										<td>22</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(15)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>16</td>
+										<td>和田 智弘</td>
+										<td>050-1918-8291</td>
+										<td>1953年03月30日</td>
+										<td>70</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(16)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>17</td>
+										<td>中島 桂</td>
+										<td>090-4110-3280</td>
+										<td>1966年03月15日</td>
+										<td>57</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(17)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>18</td>
+										<td>石井 大樹</td>
+										<td>070-2522-0614</td>
+										<td>2001年11月08日</td>
+										<td>21</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(18)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>19</td>
+										<td>鶴見 新一</td>
+										<td>080-9109-6804</td>
+										<td>1963年09月07日</td>
+										<td>59</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(19)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>20</td>
+										<td>阿部 康行</td>
+										<td>070-3697-9714</td>
+										<td>1955年06月14日</td>
+										<td>68</td>
+										<td>
+											<div class="bgroup">
+												<button class="ibtn"><i class="fa-solid fa-pen"></i></button>
+												<button class="ibtn" onclick="delete_dialog(20)"><i class="fa-solid fa-trash"></i></button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer_copy">© <a class="-noicon" href="https://www.networld-jp.net/" target="_blank">NETWORLD INC</a>. All Rights Reserved.</div>
+			<dl class="footer_ver">
+				<dt>Version</dt>
+				<dd>1.0.0</dd>
+			</dl>
+		</footer>
+	</div>
+	<div id="dialog" class="dialog">
+		<div class="card">
+			<h2 class="card_ttl">XXXXの削除</h2>
+			<p class="card_text">XXXXを削除してもよろしいですか？</p>
+			<div class="text-end mt-3">
+				<form class="bgroup" action="" method="delete">
+					<input type="hidden" name="delete_id">
+					<button id="dialog_close" class="btn -gray" type="button">キャンセル</button>
+					<button class="btn" type="submit">削除する</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script>
+		// 削除ダイアログ
+		function delete_dialog(id) {
+			$('#dialog').fadeIn().css('display', 'flex');
+			$('[name="delete_id"]').val(id);
+		}
+		$('#dialog, #dialog_close').on('click', function (e) {
+			if (e.target !== e.currentTarget) return;
+			$('#dialog').fadeOut();
+			$('[name="delete_id"]').val('');
+		});
+	</script>
+	<script>
+		// DataTables
+		new DataTable('#table', {
+			bStateSave: true,
+			pageLength: 25,
+			language: {
+				url: 'https://cdn.datatables.net/plug-ins/1.13.5/i18n/ja.json',
+			},
+		});
+	</script>
+	<script src="./js/common.js"></script>
+</body>
+
+</html>

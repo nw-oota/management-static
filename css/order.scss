@@ -1,0 +1,325 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap");
+
+@page {
+	margin: 0mm;
+
+	size: A4 portrait;
+}
+
+html {
+	font-size: 9pt;
+	line-height: 1.5;
+}
+
+body {
+	margin: 0mm;
+	background: #eeeeee;
+	font-family: "Noto Sans JP", sans-serif;
+}
+
+.page {
+	width: 210mm;
+	height: 297mm;
+	margin: auto;
+	padding: 12mm 15mm;
+	box-sizing: border-box;
+	background: #fefefe;
+}
+
+.head {
+	display: table;
+	width: 100%;
+
+	&_ttl {
+		display: table-cell;
+		font-weight: bold;
+		font-size: 20pt;
+		vertical-align: middle;
+	}
+
+	&_info {
+		display: table-cell;
+		text-align: right;
+		vertical-align: middle;
+
+		dl {
+			margin-top: 0.2rem;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			dt {
+				display: inline;
+			}
+
+			dd {
+				display: inline;
+			}
+		}
+	}
+}
+
+.info {
+	margin-top: 3rem;
+	overflow: hidden;
+
+	&_col {
+		&.-left {
+			float: left;
+		}
+
+		&.-right {
+			float: right;
+		}
+	}
+
+	&_name {
+		display: inline-block;
+		padding-bottom: 0.5rem;
+		border-bottom: 2px solid;
+		border-color: #ffffff;
+		border-bottom-color: #000000;
+		font-weight: bold;
+		font-size: 1.25rem;
+
+		small {
+			margin-left: 1em;
+		}
+	}
+
+	&_text {
+		margin-top: 1rem;
+	}
+
+	&_detail {
+		margin-top: 2rem;
+
+		dl {
+			overflow: hidden;
+
+			dt {
+				float: left;
+			}
+
+			dd {
+				margin-left: 6em;
+			}
+		}
+	}
+
+	&_total {
+		display: table;
+		width: 100%;
+		margin-top: 2rem;
+		padding-bottom: 0.5rem;
+		overflow: hidden;
+		border-bottom: 2px solid;
+		border-color: #ffffff;
+		border-bottom-color: #000000;
+		font-size: 1.2rem;
+
+		dt {
+			display: table-cell;
+			vertical-align: bottom;
+		}
+
+		dd {
+			display: table-cell;
+			margin-left: 6em;
+			font-size: 1.75em;
+			text-align: right;
+			vertical-align: bottom;
+
+			small {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	&_nw {
+		position: relative;
+
+		&_cnt {
+			position: relative;
+			z-index: 10;
+		}
+
+		&_name {
+			display: table;
+			line-height: 1;
+
+			div {
+				display: table-cell;
+				padding-right: 1rem;
+				vertical-align: bottom;
+
+				svg {
+					width: 30pt;
+					height: auto;
+				}
+			}
+
+			span {
+				display: table-cell;
+				margin-top: 0.5rem;
+				font-weight: bold;
+				font-size: 1.25rem;
+				vertical-align: bottom;
+			}
+		}
+
+		&_info {
+			margin-top: 1rem;
+		}
+
+		&_sign {
+			position: absolute;
+			right: 0;
+			bottom: -1rem;
+
+			mix-blend-mode: multiply;
+		}
+	}
+
+	&_please {
+		width: 22em;
+		margin-top: 3rem;
+		padding: 1.25rem;
+		background: #efefef;
+
+		dt {
+			font-weight: bold;
+		}
+
+		dd {
+			margin-top: 0.25rem;
+			font-size: 0.9rem;
+		}
+	}
+}
+
+.tbl {
+	width: 100%;
+	// min-height: 30rem;
+	margin-top: 3rem;
+
+	th,
+	td {
+		padding: 0.9rem 0.9rem;
+		border: 1px solid;
+	}
+
+	thead {
+		th {
+			padding: 0.4rem 0.9rem;
+			background: #eeeeee;
+			text-align: center;
+		}
+	}
+
+	td {
+		&:last-child {
+			text-align: right;
+			white-space: nowrap;
+		}
+	}
+}
+
+.sign {
+	margin-top: 3rem;
+	border: 1px solid;
+	border-spacing: 1.5rem;
+
+	&_col {
+		display: table-cell;
+		width: 100%;
+		vertical-align: bottom;
+	}
+
+	&_text {}
+
+	&_form {
+		margin-top: 1.75rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 1px solid;
+		font-weight: bold;
+		font-size: 1.2rem;
+	}
+
+	&_mark {
+		display: table;
+		width: 6rem;
+		border: 1px solid #dddddd;
+		border-spacing: 0rem;
+
+		span {
+			display: table-cell;
+			height: 6rem;
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+}
+
+.foot {
+	margin-top: 0.2rem;
+	overflow: hidden;
+
+	.caution {
+		float: left;
+		margin-top: 1.5rem;
+		font-size: 0.8em;
+
+		li {
+			padding-left: 1em;
+			text-indent: -1em;
+		}
+	}
+
+	.sum {
+		display: table;
+		margin-top: 0.2rem;
+		margin-left: auto;
+
+		dl {
+			display: table-row;
+
+			dt,
+			dd {
+				display: table-cell;
+				padding: 0.4rem 0;
+				border-bottom: 1px dotted;
+				border-color: #ffffff;
+				border-bottom-color: #000000;
+			}
+
+			dt {
+				padding-right: 1rem;
+				font-weight: normal;
+			}
+
+			dd {
+				text-align: right;
+			}
+
+			&.-total {
+
+				dt,
+				dd {
+					border-bottom: 1px solid;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+.end {
+	clear: both;
+	margin-top: 3rem;
+	text-align: right;
+	vertical-align: bottom;
+}

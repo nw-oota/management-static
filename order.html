@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>発注書</title>
+	<meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="./css/destyle.css" media="all">
+	<link rel="stylesheet" href="./css/order.css" media="all">
+	<!-- wkhtmltopdf --disable-smart-shrinking -T 0 -B 0 -L 0 -R 0 http://localhost:3016/order.html order.pdf -->
+</head>
+
+<body>
+	<article class="page">
+		<header class="head">
+			<h1 class="head_ttl">発注書</h1>
+			<div class="head_info">
+				<dl>
+					<dt>管理番号：</dt>
+					<dd>11607</dd>
+				</dl>
+				<dl>
+					<dt>発注日：</dt>
+					<dd>2023/07/19</dd>
+				</dl>
+			</div>
+		</header>
+		<div class="info">
+			<div class="info_col -left">
+				<p class="info_name"><span>株式会社北陸サンライズ</span><small>御中</small></p>
+				<p class="info_text">以下の通り発注いたします。</p>
+				<div class="info_detail">
+					<dl>
+						<dt>納　　期：</dt>
+						<dd>2023/08/19</dd>
+					</dl>
+					<dl>
+						<dt>支払期日：</dt>
+						<dd>毎月20日納品締切、翌月末支払</dd>
+					</dl>
+					<dl>
+						<dt>支払方法：</dt>
+						<dd>全額現金払（振込手数料差引分を口座振込）</dd>
+					</dl>
+					<dl>
+						<dt>納入場所：</dt>
+						<dd>米田木材様 本社<br>〒934-0003 富山県射水市庄川本町16-3<br>TEL 0766-84-8666</dd>
+					</dl>
+				</div>
+				<dl class="info_total">
+					<dt>合計金額：</dt>
+					<dd><strong>¥16,500</strong><small>（税込）</small></dd>
+				</dl>
+			</div>
+			<div class="info_col -right">
+				<div class="info_nw">
+					<div class="info_nw_cnt">
+						<div class="info_nw_name">
+							<div>
+								<img src="./img/docs/logo.png" width="40" alt="">
+							</div>
+							<span>株式会社ネットワールド</span>
+						</div>
+						<p class="info_nw_info">
+							〒939-8096 富山県富山市西大泉5-15<br>
+							TEL：076-494-1460<br>
+							FAX：076-494-1582<br>
+							担当者：新田
+						</p>
+					</div>
+					<div class="info_nw_sign"><img src="./img/docs/sign.png" width="90" alt=""></div>
+				</div>
+				<dl class="info_please">
+					<dt>発注書に関するお願い</dt>
+					<dd>貴社から請求書を郵送していただく際、この発注書も同封して郵送をお願いいたします。</dd>
+				</dl>
+			</div>
+		</div>
+		<table class="tbl">
+			<thead>
+				<tr>
+					<th class="-col1">品名</th>
+					<th class="-col2">内容</th>
+					<th class="-col3">金額</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>名刺印刷</td>
+					<td>
+						名刺印刷(米田木材株式会社様)<br>
+						100枚 3,000円 1名<br>
+						200枚 6,000円 2名<br>
+						合計 15,000円
+					</td>
+					<td>¥15,000</td>
+				</tr>
+			</tbody>
+		</table>
+		<footer class="foot">
+			<ul class="caution">
+				<li>※本発注書の金額は消費税込の金額です。</li>
+				<li>※本発注書にご捺印の上、御社請求書を発送の際に同封ください。</li>
+			</ul>
+			<div class="sum">
+				<dl>
+					<dt>小計</dt>
+					<dd>¥15,000</dd>
+				</dl>
+				<dl>
+					<dt>消費税額（10%）</dt>
+					<dd>¥1,500</dd>
+				</dl>
+				<dl class="-total">
+					<dt>合計金額</dt>
+					<dd>¥16,500</dd>
+				</dl>
+			</div>
+		</footer>
+		<!-- <div class="sign">
+			<div class="sign_col -cnt">
+				<p class="sign_text">上記の通り、ご注文を承ります。</p>
+				<p class="sign_form">株式会社北陸サンライズ　*いらなくなるかも</p>
+			</div>
+			<div class="sign_col -mark">
+				<div class="sign_mark">
+					<span>印</span>
+				</div>
+			</div>
+		</div> -->
+		<p class="end">以上</p>
+	</article>
+</body>
+
+</html>
